@@ -1,4 +1,4 @@
-const eqArrays = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   let same = false;
   // compare each index in arr1 to the corresponding index in arr2
   if (arr1.length === arr2.length) {
@@ -24,5 +24,5 @@ const eqArrays = function(arr1, arr2) {
 // messages are more difficult to test using assertions. This
 // is because we cannot simply compare their return value to
 // an expected value.")
-eqArrays([1, 2, 3], [1, 2, 3]);
-eqArrays([1, 2, 3], ['a', 'b', 'c']);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], ['a', 'b', 'c']);
