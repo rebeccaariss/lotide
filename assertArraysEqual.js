@@ -7,10 +7,22 @@ const eqArrays = function(arr1, arr2) {
         same = true;
       } else {
         same = false;
-        return same;
+        // this return statement can be eliminated:
+        // return same;
       }
     }
   }
-  return same;
+  if (same === true) {
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+  }
 };
 
+// Check message is printing properly:
+// ("Functions that do not return values and instead print out
+// messages are more difficult to test using assertions. This
+// is because we cannot simply compare their return value to
+// an expected value.")
+eqArrays([1, 2, 3], [1, 2, 3]);
+eqArrays([1, 2, 3], ['a', 'b', 'c']);
