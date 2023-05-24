@@ -48,7 +48,7 @@ const middle = function(arr) {
 // TEST CODE
 // For arrays with one or two elements, there is no middle. Return an empty array.
 // Note: assertArraysEqual function needs to be refactored to
-// handle mpty arrays.
+// handle empty arrays.
 assertArraysEqual(middle([1]), []);
 assertArraysEqual(middle([1, 2]), []);
 
