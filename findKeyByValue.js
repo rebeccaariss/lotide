@@ -23,7 +23,7 @@ const findKeyByValue = function(obj, val) {
 
 // TEST CODE
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };
@@ -32,7 +32,7 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
 const multipleTitles = {
-  sci_fi: ["The Expanse", "Agents of Shield", "The Mandalorian"],
+  sciFi: ["The Expanse", "Agents of Shield", "The Mandalorian"],
   comedy: ["Brooklyn Nine-Nine", "The Office", "Marvelous Mrs. Maisel"],
   drama:  ["The Wire", "The Good Wife", "Evil"]
 };
