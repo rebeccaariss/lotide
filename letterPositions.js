@@ -38,9 +38,20 @@ const eqArrays = function(arr1, arr2) {
 
 // FUNCTION IMPLEMENTATION
 const letterPositions = function(sentence) {
+
   const results = {};
-  // logic to update results here
+
+  for (let i = 0; i < sentence.length; i++) {
+    if (results[sentence[i]]) {
+      results[sentence[i]].push(i);
+    } else {
+      results[sentence[i]] = [i];
+    }
+  }
+    
   return results;
 };
 
 // TEST CODE
+assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("hello world").l, [2, 3, 9]);
