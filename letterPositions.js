@@ -41,11 +41,13 @@ const letterPositions = function(sentence) {
 
   const results = {};
 
-  for (let i = 0; i < sentence.length; i++) {
-    if (results[sentence[i]]) {
-      results[sentence[i]].push(i);
+  let spacelessSentence = sentence.replaceAll(" ", "");
+
+  for (let i = 0; i < spacelessSentence.length; i++) {
+    if (results[spacelessSentence[i]]) {
+      results[spacelessSentence[i]].push(i);
     } else {
-      results[sentence[i]] = [i];
+      results[spacelessSentence[i]] = [i];
     }
   }
     
@@ -54,4 +56,4 @@ const letterPositions = function(sentence) {
 
 // TEST CODE
 assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello world").l, [2, 3, 9]);
+assertArraysEqual(letterPositions("hello world").l, [2, 3, 8]);
