@@ -14,6 +14,7 @@ const countLetters = function(sentence) {
   const results = {};
 
   // for...of does not include spaces in the count:
+  // NOTE: did need regex above despite this note about for...of from Compass. The two things seem to be needed in combination. Revisit at refactor.
   for (const letter of spacelessSentence) {
     if (results[letter]) {
       results[letter] += 1;
