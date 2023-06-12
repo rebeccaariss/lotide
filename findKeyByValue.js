@@ -1,11 +1,4 @@
-// Copying and pasting this function for now per instructions:
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 // FUNCTION IMPLEMENTATION
 const findKeyByValue = function(obj, val) {
@@ -37,6 +30,6 @@ const multipleTitles = {
   drama:  ["The Wire", "The Good Wife", "Evil"]
 };
 
-assertEqual(findKeyByValue(multipleTitles, "Agents of Shield"), "sci_fi");
+assertEqual(findKeyByValue(multipleTitles, "Agents of Shield"), "sciFi");
 assertEqual(findKeyByValue(multipleTitles, "The Good Wife"), "drama");
 assertEqual(findKeyByValue(multipleTitles, "SpongeBob SquarePants"), undefined);
