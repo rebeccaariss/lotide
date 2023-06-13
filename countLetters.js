@@ -1,4 +1,5 @@
 const assertEqual = require('./assertEqual');
+const findKey = require('./findKey');
 
 // FUNCTION IMPLEMENTATION
 const countLetters = function(sentence) {
@@ -39,3 +40,5 @@ assertEqual(result3[" "], undefined);
 assertEqual(result3["%"], 1);
 
 // Note: Not part of the assignment, but for later refactoring: exclude symbols like "% or "$" from the count
+
+module.exports = countLetters;

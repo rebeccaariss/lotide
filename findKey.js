@@ -20,3 +20,5 @@ assertEqual(findKey({
 }, x => x.stars === 2), "noma"); // => "noma"
 
 assertEqual(findKey({ "fiction": 18, "non-fiction": 22 }, x => x.fiction === 8), undefined);
+
+module.exports = findKey;

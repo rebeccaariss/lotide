@@ -33,3 +33,5 @@ const multipleTitles = {
 assertEqual(findKeyByValue(multipleTitles, "Agents of Shield"), "sciFi");
 assertEqual(findKeyByValue(multipleTitles, "The Good Wife"), "drama");
 assertEqual(findKeyByValue(multipleTitles, "SpongeBob SquarePants"), undefined);
+
+module.exports = findKeyByValue;

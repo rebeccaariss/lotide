@@ -24,3 +24,5 @@ assertArraysEqual(flatten([[], [], []]), undefined);
 assertArraysEqual(flatten([[], [1], []]), [1]);
 
 // assertArraysEqual to be refactored at a later date.
+
+module.exports = flatten;

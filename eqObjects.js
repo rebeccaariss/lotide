@@ -52,3 +52,5 @@ assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
 
 assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false); // => false
+
+module.exports = eqObjects;

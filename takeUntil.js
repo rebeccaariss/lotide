@@ -35,3 +35,5 @@ console.log(results2);
 assertArraysEqual(takeUntil([], x => x > 10), []);
 assertArraysEqual(takeUntil([11, 10, 9], x => x > 10), []);
 assertArraysEqual(takeUntil([1, 2, 3], x => x > 10), [1, 2, 3]);
+
+module.exports = takeUntil;
