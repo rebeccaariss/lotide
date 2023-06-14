@@ -6,4 +6,5 @@ const assertArraysEqual = require('../assertArraysEqual');
 // is because we cannot simply compare their return value to
 // an expected value.")
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
+console.log("\n –––  NOTE: This next test is supposed to fail:  ––– \n");
 assertArraysEqual([1, 2, 3], ['a', 'b', 'c']);

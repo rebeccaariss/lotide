@@ -2,11 +2,11 @@ const flatten = function(arr) {
   const updated = [];
   for (const element of arr) {
     if (Array.isArray(element)) {
-      for (let i = 0; i < element.length; i++) {
-        updated.push(element[i]);
+      for (const nestedItem of element) {
+        updated.push(nestedItem);
       }
     } else {
-      updated.push(arr[element]);
+      updated.push(element);
     }
   }
   return updated;

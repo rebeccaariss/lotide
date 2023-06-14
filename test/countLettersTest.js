@@ -7,9 +7,9 @@ const result1 = countLetters("hello");
 const result2 = countLetters("  ");
 const result3 = countLetters("Lighthouse%Labs");
 
-console.log(result1);
-console.log(result2);
-console.log(result3);
+// console.log(result1);
+// console.log(result2);
+// console.log(result3);
 
 assertEqual(result1["h"], 1);
 assertEqual(result1["l"], 2);
