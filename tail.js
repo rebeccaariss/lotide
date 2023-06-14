@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const tail = function(arr) {
   let headless = arr.slice();
   headless.shift();

@@ -1,7 +1,5 @@
 const eqObjects = require('./eqObjects');
-const eqArrays = require('./eqArrays');
 
-// FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   const actualArr = Object.keys(actual);
@@ -16,11 +14,5 @@ const assertObjectsEqual = function(actual, expected) {
   }
 
 };
-
-// TEST CODE
-assertObjectsEqual({ a: 1, b: 2, c: 3}, { a: 1, b: 2, c: 3});
-assertObjectsEqual({}, {});
-assertObjectsEqual({ a: [1, 2, 3]}, { a: [1, 2, 3] });
-assertObjectsEqual({ fruit: "banana" }, { vegetable: "carrot" });
 
 module.exports = assertObjectsEqual;

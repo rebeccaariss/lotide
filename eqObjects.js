@@ -1,16 +1,13 @@
 const eqArrays = require('./eqArrays');
-const assertEqual = require('./assertEqual');
 
-// FUNCTION IMPLEMENTATION
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// Returns true if both objects have identical keys with identical values
 const eqObjects = function(object1, object2) {
   const obj1Arr = Object.keys(object1);
   const obj2Arr = Object.keys(object2);
 
   if (obj1Arr.length === obj2Arr.length) {
     for (const key of obj1Arr) {
-      // If the values compared below do not match, we will first want to check if they are arrays (next code block):
+      // If the values compared below do not match, we will first want to check if they are arrays (next code block)
       // This is because it is possible to have two arrays which appear identical, but because of the nature of arrays, are not.
       if (object1[key] !== object2[key]) {
         // If the value associated with current iteration (key) for object1 is an array, then we enter
@@ -34,23 +31,5 @@ const eqObjects = function(object1, object2) {
   // can therefore return false:
   return false;
 };
-
-// TEST CODE
-const shirtObject = { colour: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", colour: "red" };
-const longSleeveShirtObject = { size: "medium", colour: "red", sleeveLength: "long" };
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-
-eqObjects(shirtObject, anotherShirtObject); // => true
-assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
-
-eqObjects(shirtObject, longSleeveShirtObject); // => false
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
-
-assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
-
-assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false); // => false
 
 module.exports = eqObjects;

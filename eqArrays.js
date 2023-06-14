@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const eqArrays = function(arr1, arr2) {
   let same = false;
   if (arr1.length === 0 && arr2.length === 0) {
